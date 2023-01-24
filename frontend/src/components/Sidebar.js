@@ -13,7 +13,7 @@ import { CartContext } from "../contexts/CartContext";
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart, clearCart, total } = useContext(CartContext);
+  const { cart, clearCart, total, itemAmount } = useContext(CartContext);
   return (
     <div
       className={`${
@@ -23,7 +23,7 @@ const Sidebar = () => {
       <div className="flex flex-col space-y-4">
         <div className="font-semibold flex items-center justify-between border-b py-6 border-gray-300">
           {/* Shopping Cart Title */}
-          <div className="">Shopping Cart (0)</div>
+          <div className="">Shopping Cart ({itemAmount})</div>
           {/* icons */}
           <div onClick={handleClose} className="cursor-pointer">
             <IoMdArrowForward className="text-2xl" />
