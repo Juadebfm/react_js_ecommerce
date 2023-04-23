@@ -46,7 +46,7 @@ const Sidebar = () => {
             </div>
           </div>
           <Link
-            to={"/"}
+            to={"../pages/ViewCart.jsx"}
             className="bg-gray-200 flex p-4 justify-center text-primary w-full font-medium my-3"
           >
             View Cart
